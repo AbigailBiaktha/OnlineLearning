@@ -1,11 +1,4 @@
-<?php
 
-session_start();
-require_once "logic/connect.php";
-if (isset($_SESSION["user"])) {
-    header("Location: index.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 

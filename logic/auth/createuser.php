@@ -1,4 +1,6 @@
 <?php
+// registration.php
+require_once(__DIR__ . "/../connect.php");
 
 
 if (isset($_POST["submit"])) {
