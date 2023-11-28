@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color:#3368C6ff;; 
+}
+
+.logo-container {
+    flex: 1; 
+}
+
+.logo-container a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 30px;
+}
+.navtext {
+    text-align: center;
+    margin: 0;
+}

@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <?php include_once "layout/loginNavbar.php"; ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +13,45 @@
 
 <body>
     <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <?php include("logic/auth/loginuser.php") ?>
 
-        <?php include("logic/auth/loginuser.php") ?>
+                <h2 class="text-center mb-4">Login</h2>
 
-        <form method="post">
-            <div class="form-group">
-                <input type="email" placeholder="Enter Email:" name="email" class="form-control">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Enter Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Enter Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                    <button type="submit" name="login" class="btn btn-primary btn-lg w-75" style="background-color: #3368C6; border-color: #3368C6;" disabled>
+                    Login
+                   </button>
+                   </div>
+
+
+                </form>
+                <div class="text-center">
+                    <p>Not registered yet <a href="registration.php">Register Here</a></p>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="password" placeholder="Enter Password:" name="password" class="form-control">
-            </div>
-            <div class="form-btn">
-                <input type="submit" value="Login" name="login" class="btn btn-primary">
-            </div>
-        </form>
-        <div>
-            <p>Not registered yet <a href="registration.php">Register Here</a></p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('input', function () {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var submitButton = document.querySelector('[name="login"]');
+
+            submitButton.disabled = !(email && password);
+        });
+    </script>
 </body>
 
 </html>

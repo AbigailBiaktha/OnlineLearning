@@ -11,6 +11,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <html lang="en">
 
 <head>
+  
     <meta charset="utf-8">
     <title>E - Learning</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
