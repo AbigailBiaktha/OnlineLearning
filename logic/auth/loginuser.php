@@ -44,7 +44,7 @@ if (isset($_POST["login"])) {
             $_SESSION["user"] = "yes";
             $_SESSION["admin"] = false;
             $_SESSION["loggedin"] = true; // Set the session variable for logged-in status
-            header("Location: home.php");
+            header("Location: index.php");
             die();
         }
     }
@@ -52,4 +52,3 @@ if (isset($_POST["login"])) {
     // If neither admin nor regular user, display an error message
     echo "<div class='alert alert-danger'>Invalid login credentials</div>";
 }
-?>

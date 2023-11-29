@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,10 +98,12 @@
 
                         <a href="classes.php" class="nav-item nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'classes.php') ? 'active' : ''; ?>">Courses</a>
                     </div>
-                    <div class="ms-auto d-none d-lg-flex">
-                        <a class="m-2" href="">Register</a>
-                        <a class="btn btn-primary rounded-pill ms-2 px-4" href="">Login</a>
-                    </div>
+                    <?php if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) { ?>
+                        <div class="ms-auto d-none d-lg-flex">
+                            <a class="m-2" href="registration.php">Register</a>
+                            <a class="btn btn-primary rounded-pill ms-2 px-4" href="login.php">Login</a>
+                        </div>
+                    <?php } ?>
                 </div>
             </nav>
         </div>

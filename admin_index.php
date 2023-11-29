@@ -15,12 +15,15 @@ if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Hi heelo </h1>
 </body>
+
 </html>

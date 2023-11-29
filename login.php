@@ -29,10 +29,10 @@
                         <input type="password" id="password" name="password" class="form-control" required>
                     </div>
                     <div class="mb-3 text-center">
-                    <button type="submit" name="login" class="btn btn-primary btn-lg w-75" style="background-color: #3368C6; border-color: #3368C6;" disabled>
-                    Login
-                   </button>
-                   </div>
+                        <button type="submit" name="login" class="btn btn-primary btn-lg w-75" style="background-color: #3368C6; border-color: #3368C6;">
+                            Login
+                        </button>
+                    </div>
 
 
                 </form>
@@ -43,15 +43,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('input', function () {
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var submitButton = document.querySelector('[name="login"]');
 
-            submitButton.disabled = !(email && password);
-        });
-    </script>
 </body>
 
 </html>
