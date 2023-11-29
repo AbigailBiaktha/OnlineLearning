@@ -5,6 +5,7 @@ require_once(__DIR__ . "/../connect.php");
 $sql = "SELECT * FROM class";
 $result = mysqli_query($conn, $sql);
 
+
 while ($row = mysqli_fetch_assoc($result)) {
     echo "
     <tr>
