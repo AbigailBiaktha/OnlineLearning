@@ -26,13 +26,13 @@
                 </a>
             </div>
             <div class="col-lg-6">
-                <a href="mailto:elearn@gmail.com" class="d-flex justify-content-lg-center bg-primary p-4">
+                <a href="mailto:gpath@edu.com" class="d-flex justify-content-lg-center bg-primary p-4">
                     <div class="icon-box-light flex-shrink-0">
                         <i class="bi bi-envelope text-dark"></i>
                     </div>
                     <div class="ms-3">
                         <h5 class="text-white">Mail Us</h5>
-                        <h2 class="text-white mb-0">elearn@gmail.com</h2>
+                        <h2 class="text-white mb-0">gpath@edu.com</h2>
                     </div>
                 </a>
             </div>

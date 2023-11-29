@@ -11,8 +11,8 @@
                         <div class="row justify-content-start">
                             <div class="col-lg-7 text-start">
                                 <h1 class="display-1 text-white animated slideInRight mb-3">Best Place to Learn Online</h1>
-                                <p class="mb-5 animated slideInRight">Learn with E-learning for free, the best e-learning platform where you can get to study with certified teachers with no cost at all.</p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">View Classes</a>
+                                <p class="mb-5 animated slideInRight">Learn with G-Path for free, the best online learning platform where you can get to study with certified teachers with no cost at all.</p>
+                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">View Courses</a>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="col-lg-7 text-end">
                                 <h1 class="display-1 text-white animated slideInLeft mb-3">Learn Anywhere, Anytime You Like</h1>
                                 <p class="mb-5 animated slideInLeft">You can learn with us from anywhere, anytime as you like with so many courses available.</p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">View Classess</a>
+                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">View Courses</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                         <i class="bi bi-cash-coin text-dark"></i>
                     </div>
                     <h5 class="mb-3">Learn For Free</h5>
-                    <p class="mb-0">At E-Learn, we believe that education should be accessible to all, regardless of financial constraints. That's why we're proud to offer a wide range of high-quality courses that you can access and learn from entirely for free.</p>
+                    <p class="mb-0">At G-Path, we believe that education should be accessible to all, regardless of financial constraints. That's why we're proud to offer a wide range of high-quality courses that you can access and learn from entirely for free.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
@@ -85,7 +85,7 @@
                         <i class="bi bi-headphones text-dark"></i>
                     </div>
                     <h5 class="mb-3">Millions Of Students</h5>
-                    <p class="mb-0">We take pride in being more than just an e-learning platform—we're a global community that empowers millions of students to shape their futures.</p>
+                    <p class="mb-0">We take pride in being more than just a learning platform—we're a global community that empowers millions of students to shape their futures.</p>
                 </div>
             </div>
         </div>

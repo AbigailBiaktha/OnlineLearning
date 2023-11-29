@@ -2,9 +2,9 @@
 require_once(__DIR__ . "/../connect.php");
 
 if (isset($_POST['addBtn'])) {
-    $name = $_POST['name'];
+    $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
     $image = null;
-    $description = $_POST['description'];
+    $description = htmlspecialchars($_POST['description'], ENT_QUOTES, 'UTF-8');
 
     if (isset($_FILES['image'])) {
         $imgName = $_FILES['image'];

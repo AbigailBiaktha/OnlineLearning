@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>E - Learn</title>
+    <title>G-Path</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -65,12 +65,12 @@
                         <span>09 1234 5678</span>
                     </div>
                 </div>
-                <a href="index.php" class="h1 text-white mb-0">E<span class="text-dark"> - Learn</span></a>
+                <a href="index.php" class="h1 text-white mb-0">G<span class="text-dark">-Path</span></a>
                 <div class="d-flex">
                     <i class="bi bi-envelope fs-2"></i>
                     <div class="ms-3">
                         <h5 class="text-white mb-0">Mail Now</h5>
-                        <span>elearn@gmail.com</span>
+                        <span>gpath@edu.com</span>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="text-primary m-0">E<span class="text-dark"> - Learn</span></h1>
+                    <h1 class="text-primary m-0">G<span class="text-dark">-Path</span></h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -95,7 +95,7 @@
 
                         <a href="contact.php" class="nav-item nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'active' : ''; ?>">Contact</a>
 
-                        <a href="classes.php" class="nav-item nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'classes.php') ? 'active' : ''; ?>">Classes</a>
+                        <a href="classes.php" class="nav-item nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'classes.php') ? 'active' : ''; ?>">Courses</a>
                     </div>
                     <div class="ms-auto d-none d-lg-flex">
                         <a class="m-2" href="">Register</a>
