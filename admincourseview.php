@@ -77,8 +77,8 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Update Lesson</h3>
-              <?php include_once('data/updatelesson.php'); ?>
+              <h3 class="box-title">Course List</h3>
+              <?php include_once('data/course.php'); ?>
             </div>
 
       <div class="control-sidebar-bg"></div>

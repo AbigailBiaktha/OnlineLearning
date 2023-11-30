@@ -12,7 +12,7 @@ unlink($image);
 $sql = " DELETE FROM class WHERE id = $id";
 
 if (mysqli_query($conn, $sql)) {
-    header("location:../../index.php");
+    header("location:../../admincourseview.php");
 } else {
     echo "Delete Fail";
 };

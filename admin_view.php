@@ -1,4 +1,18 @@
+<?php
+session_start();
 
+// Check if the user is logged in
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}
+
+// Check if the user has admin privileges
+if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
+    header("location:index.php"); 
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,15 +91,10 @@
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Home</h3>
+              <h3 class="box-title">User</h3>
             </div>
-            <div class="box-body">
-              
-              <div id="table-laundry"></div>
-            </div><!-- /.box-body -->
-            
-          </div><!-- /.box -->
-          <?php include_once('userlist.php'); ?>
+        
+          <?php include_once('data/user.php'); ?>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
     
