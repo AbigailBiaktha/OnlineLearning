@@ -27,8 +27,6 @@
     </form>
 
 
-    <?php include("logic/lesson/readlesson.php")  ?>
-
 </body>
 
 

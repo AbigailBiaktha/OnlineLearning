@@ -112,12 +112,12 @@
             </nav>
         </div>
     </div>
+    <!-- Navbar End -->
 
     <script>
         function confirmLogout() {
             var confirmLogout = confirm("Are you sure you want to logout?");
             if (confirmLogout) {
-                // If the user clicks "OK" in the confirmation dialog, proceed with the logout
                 window.location.href = "logout.php";
             } else {
                 // If the user clicks "Cancel" in the confirmation dialog, do nothing (or handle it as needed)

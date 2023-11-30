@@ -23,7 +23,7 @@
                                 <?php if (!isset($_SESSION['loggedin'])) { ?>
                                     <a onClick='enterClass()' class=" btn btn-primary">View Course<i class="bi bi-chevron-double-right ms-1"></i></a>
                                 <?php } else { ?>
-                                    <a href="./viewclass.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">View Course<i class="bi bi-chevron-double-right ms-1"></i></a>
+                                    <a href="./course.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">View Course<i class="bi bi-chevron-double-right ms-1"></i></a>
                                 <?php } ?>
                             </div>
                         </div>
