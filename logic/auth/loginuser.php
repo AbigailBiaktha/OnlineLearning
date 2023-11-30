@@ -22,7 +22,7 @@ if (isset($_POST["login"])) {
             $_SESSION["user"] = "yes";
             $_SESSION["admin"] = true;
             $_SESSION["loggedin"] = true; // Set the session variable for logged-in status
-            header("Location: admin_index.php");
+            header("Location: admin_view.php");
             die();
         }
     }
