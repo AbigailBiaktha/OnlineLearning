@@ -22,25 +22,25 @@ require_once("logic/auth/usermanage.php");
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
+
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Privilege Level</th>
+
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($users as $user) : ?>
                     <tr id="userRow<?= $user['id']; ?>">
-                        <td><?= $user["id"]; ?></td>
+
                         <td><?= $user["full_name"]; ?></td>
                         <td><?= $user["email"]; ?></td>
-                        <td><?= $user["PrivilegeLevel"]; ?></td>
+
                         <td>
                             <div class="action-buttons">
-                            <button type="button" class="btn btn-primary btn-sm">
-                               <a href="updateuser.php?userId=<?= $user['id']; ?>" style="color: white; text-decoration: none;">Update</a>
-                           </button>
+                                <button type="button" class="btn btn-primary btn-sm">
+                                    <a href="updateuser.php?userId=<?= $user['id']; ?>" style="color: white; text-decoration: none;">Update</a>
+                                </button>
                                 <!-- Delete form -->
                                 <form method="post" action="admin_view.php" onsubmit="return confirm('Are you sure you want to delete this user?')">
                                     <input type="hidden" name="userIdToDelete" value="<?= $user["id"]; ?>">

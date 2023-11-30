@@ -3,10 +3,11 @@ require_once(__DIR__ . "/../connect.php");
 
 
 // Function to fetch all users from the database
-function fetchAllUsers($conn) {
-    $sql = "SELECT * FROM users";
+function fetchAllUsers($conn)
+{
+    $sql = "SELECT * FROM users WHERE PrivilegeLevel=0";
     $result = mysqli_query($conn, $sql);
-    
+
     if (!$result) {
         // Handle query error
         die("Error fetching users: " . mysqli_error($conn));
@@ -16,7 +17,8 @@ function fetchAllUsers($conn) {
 }
 
 // Function to update user data
-function updateUserData($conn, $userId, $newFullName, $newEmail, $newPrivilege) {
+function updateUserData($conn, $userId, $newFullName, $newEmail, $newPrivilege)
+{
     $updateSql = "UPDATE users SET full_name = ?, email = ?, PrivilegeLevel = ? WHERE id = ?";
     $updateStmt = mysqli_stmt_init($conn);
 
@@ -33,7 +35,8 @@ function updateUserData($conn, $userId, $newFullName, $newEmail, $newPrivilege) 
 }
 
 // Function to delete user data
-function deleteUserData($conn, $userIdToDelete) {
+function deleteUserData($conn, $userIdToDelete)
+{
     $deleteSql = "DELETE FROM users WHERE id = ?";
     $deleteStmt = mysqli_stmt_init($conn);
 
@@ -41,7 +44,6 @@ function deleteUserData($conn, $userIdToDelete) {
         mysqli_stmt_bind_param($deleteStmt, "i", $userIdToDelete);
         mysqli_stmt_execute($deleteStmt);
         mysqli_stmt_close($deleteStmt);
-
     } else {
         // Handle prepared statement error
         die("Delete statement preparation error: " . mysqli_error($conn));
@@ -68,7 +70,8 @@ if (isset($_POST["deleteUser"])) {
 $users = fetchAllUsers($conn);
 
 // Function to get user data by ID
-function getUserById($conn, $userId) {
+function getUserById($conn, $userId)
+{
     // Your SQL query to fetch user data by ID
     $sql = "SELECT * FROM users WHERE id = ?";
     $stmt = mysqli_stmt_init($conn);
@@ -91,5 +94,3 @@ $userId = isset($_GET['userId']) ? $_GET['userId'] : null;
 
 // Fetch the user data
 $user = getUserById($conn, $userId);
-
-?>
