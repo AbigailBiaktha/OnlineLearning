@@ -29,13 +29,13 @@ if (isset($_POST['updateBtn'])) {
         $updatesql = "UPDATE lesson SET title = '$title', content = '$content', file = '$file' WHERE id = '$id'";
 
         if (mysqli_query($conn, $updatesql)) {
-            header("location:viewclass.php?id=$row[class_id]");
+            header("location:adminclassview.php?id=$row[class_id]");
         }
     } else {
         $updatesql = "UPDATE lesson SET title = '$title', content = '$content' WHERE id = '$id'";
 
         if (mysqli_query($conn, $updatesql)) {
-            header("location:viewclass.php?id=$row[class_id]");
+            header("location:adminclassview.php?id=$row[class_id]");
         }
     }
 }

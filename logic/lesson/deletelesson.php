@@ -11,7 +11,7 @@ unlink($file);
 $sql = " DELETE FROM lesson WHERE id = $id";
 
 if (mysqli_query($conn, $sql)) {
-    header("location:../../viewclass.php?id=$row[class_id]");
+    header("location:../../adminclassview.php?id=$row[class_id]");
 } else {
     echo "Delete Fail";
 };

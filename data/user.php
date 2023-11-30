@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/logic/auth/usermanage.php");
+require_once("logic/auth/usermanage.php");
 
 ?>
 

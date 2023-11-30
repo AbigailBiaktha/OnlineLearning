@@ -1,51 +1,103 @@
-<?php 
-require_once(__DIR__ . "/logic/auth/usermanage.php");
-include_once("layout/LoginNavbar.php");
+<?php
+session_start();
 
-$userId = isset($_GET['userId']) ? $_GET['userId'] : null;
-$user = getUserById($conn, $userId);
+// Check if the user is logged in
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}
+
+// Check if the user has admin privileges
+if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
+    header("location:index.php"); 
+    exit;
+}
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update User</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/updateuser.css">
-</head>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
-<body>
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
 
-    <div class="container text-center">
-        <?php if ($user) : ?>
-            <form method="post" action="updateuser.php" class="w-50 mx-auto mt-5">
-                <input type="hidden" name="userId" value="<?= $user['id']; ?>">
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="admin_view.php" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>G</b>P</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>G</b>-Path</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </nav>
+      </header>
 
-                <div class="mb-3">
-                    <label for="newFullName" class="form-label">Full Name:</label>
-                    <input type="text" class="form-control" name="newFullName" value="<?= $user['full_name']; ?>" required>
-                </div>
+      <!-- =============================================== -->
 
-                <div class="mb-3">
-                    <label for="newEmail" class="form-label">Email:</label>
-                    <input type="email" class="form-control" name="newEmail" value="<?= $user['email']; ?>" required>
-                </div>
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+          <?php include_once('navigation.php'); ?>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
-                <button type="submit" name="updateUser" class="btn btn-primary btn-lg w-100" style="background-color:#2F4F4Fff;; border-color: #2F4F4Fff;;">Update User</button>
-            </form>
-        <?php else : ?>
-            <p>User not found.</p>
-        <?php endif; ?>
+      <!-- =============================================== -->
 
-    </div>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            <small>Welcome Administrator!</small>
+          </h1>
+        </section>
 
-    <!-- Include Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Main content -->
+        <section class="content">
 
-</body>
+          <!-- Default box -->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">User</h3>
+            </div>
+        
+          <?php include_once('data/update_user.php'); ?>
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+    
 
+  </body>
 </html>
