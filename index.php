@@ -12,7 +12,7 @@
                             <div class="col-lg-7 text-start">
                                 <h1 class="display-1 text-white animated slideInRight mb-3">Best Place to Learn Online</h1>
                                 <p class="mb-5 animated slideInRight">Learn with G-Path for free, the best online learning platform where you can get to study with certified teachers with no cost at all.</p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">View Courses</a>
+                                <a href="classes.php" class="btn btn-primary py-3 px-5 animated slideInRight">View Courses</a>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="col-lg-7 text-end">
                                 <h1 class="display-1 text-white animated slideInLeft mb-3">Learn Anywhere, Anytime You Like</h1>
                                 <p class="mb-5 animated slideInLeft">You can learn with us from anywhere, anytime as you like with so many courses available.</p>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">View Courses</a>
+                                <a href="classes.php" class="btn btn-primary py-3 px-5 animated slideInLeft">View Courses</a>
                             </div>
                         </div>
                     </div>

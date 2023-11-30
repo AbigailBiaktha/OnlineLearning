@@ -103,8 +103,24 @@
                             <a class="m-2" href="registration.php">Register</a>
                             <a class="btn btn-primary rounded-pill ms-2 px-4" href="login.php">Login</a>
                         </div>
+                    <?php } else { ?>
+                        <div class="ms-auto d-none d-lg-flex">
+                            <a class="btn btn-danger rounded-pill ms-2 px-4" onclick="confirmLogout()">Logout</a>
+                        </div>
                     <?php } ?>
                 </div>
             </nav>
         </div>
     </div>
+
+    <script>
+        function confirmLogout() {
+            var confirmLogout = confirm("Are you sure you want to logout?");
+            if (confirmLogout) {
+                // If the user clicks "OK" in the confirmation dialog, proceed with the logout
+                window.location.href = "logout.php";
+            } else {
+                // If the user clicks "Cancel" in the confirmation dialog, do nothing (or handle it as needed)
+            }
+        }
+    </script>

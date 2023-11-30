@@ -1,3 +1,16 @@
+<?php session_start();
+
+if (isset($_SESSION["loggedin"])) {
+    if (($_SESSION["admin"] == false)) {
+        header("location: index.php");
+    } else {
+        header("location: admin_index.php");
+    }
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
